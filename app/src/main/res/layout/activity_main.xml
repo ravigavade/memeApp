@@ -8,33 +8,57 @@
     android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wavebg"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/memeImage"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="9dp"
+        android:backgroundTint="@color/black"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        />
-    <TextView
-        android:id="@+id/memeAuthor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:fontFamily="casual"
-        android:gravity="end"
-        />
-    <TextView
-        android:id="@+id/memeTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
-        android:gravity="center"
-        />
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/memeImage"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+
+            />
+        <TextView
+            android:id="@+id/memeAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:fontFamily="casual"
+            android:gravity="end"
+            />
+        <TextView
+            android:id="@+id/memeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"
+            />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
 
     <Button
         android:id="@+id/btnNewMeme"
         android:layout_width="wrap_content"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+
         android:layout_height="wrap_content"
         android:fontFamily="casual"
         android:text="Next" />
